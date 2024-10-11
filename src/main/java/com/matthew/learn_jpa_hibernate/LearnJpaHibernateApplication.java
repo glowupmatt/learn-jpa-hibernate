@@ -11,8 +11,3 @@ public class LearnJpaHibernateApplication {
 	}
 
 }
-// insert into course (id, name, author)
-// values(1, 'Learn AWS', 'matthew');
-
-
-// select * from course
