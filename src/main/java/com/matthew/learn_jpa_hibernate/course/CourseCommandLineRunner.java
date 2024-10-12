@@ -23,14 +23,20 @@ public class CourseCommandLineRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         repository.save(new Course(1, "Learn AWS Now!", "in28minutes"));
-        repository.save(new Course(2, "Learn AWS Nowfdsfdsa!", "in28minutes"));
-        repository.save(new Course(3, "Learn AWS Nowfdsfds!", "in28minutes"));
+        repository.save(new Course(2, "Learn AWS Nowfdsfdsa!", "in40minutes"));
+        repository.save(new Course(3, "Learn AWS Nowfdsfds!", "in28Minutes"));
+        repository.save(new Course(4, "NOW!", "in28Minutes"));
         
         repository.deleteById(1l);
 
         System.out.println(repository.findById(2l));
         System.out.println(repository.findById(3l));
 
+
+        System.out.println(repository.findAll());
+        System.out.println(repository.count());
+        System.out.println(repository.findByAuthor("in28Minutes"));
+        System.out.println(repository.findByName("NOW!"));
         // repository.insert(new Course(1, "Learn AWS Now!", "in28minutes"));
         // repository.insert(new Course(2, "Learn AWS Nowfdsfdsa!", "in28minutes"));
         // repository.insert(new Course(3, "Learn AWS Nowfdsfds!", "in28minutes"));
